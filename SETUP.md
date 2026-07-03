@@ -32,6 +32,17 @@ One-time setup so Copilot Chat can build and edit the Notion workspace directly.
 
 The token stays in VS Code's **user-scoped** MCP config (not in this repo), so it isn't committed and doesn't leak into the workspace.
 
+Important: Do **not** store the token in this repository. If you find a `NOTION_TOKEN` value inside any workspace-scoped file such as `.vscode/mcp.json`, remove it immediately and move the configuration to your **User** MCP settings (Option A above).
+
+If you want to test the MCP server locally in PowerShell without saving the token to disk, set the environment variable for the current session and run the MCP server directly:
+
+```powershell
+$env:NOTION_TOKEN = "ntn_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+npx -y @notionhq/notion-mcp-server
+```
+
+Replace the value with the token you copied in Step 1. This sets the token only for the current PowerShell session and does not persist it to disk.
+
 ### Option A — via Command Palette (recommended)
 
 1. `Ctrl+Shift+P` → `MCP: Add Server` → Enter.

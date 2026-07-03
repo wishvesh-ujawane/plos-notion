@@ -1,5 +1,5 @@
 # Runtime artifacts
-notion-manifest.json
+#notion-manifest.json
 
 # Env / secrets (should never be here anyway — MCP token lives in VS Code user config)
 .env

@@ -1,0 +1,94 @@
+{
+  "parent_page": {
+    "id": "392e619b-a9c5-809d-a6a1-fa39a6030786",
+    "name": "PLOS — Second Brain"
+  },
+  "areas": {
+    "trading": {
+      "page_id": "392e619b-a9c5-81ca-bc86-deec3644e861",
+      "name": "🧭 Trading",
+      "databases": {
+        "trades": {
+          "id": "48ff308e-663f-48d0-94c6-2e5657388ba0",
+          "data_source_id": "773276f8-7275-4c30-bc8d-d1f4902fc599",
+          "properties": {
+            "title": "Name (should rename to 'Instrument')",
+            "Direction": "select",
+            "Status": "select",
+            "Entry Date": "date",
+            "Entry Price": "number",
+            "Exit Date": "date",
+            "Exit Price": "number",
+            "Size": "number",
+            "PnL": "formula",
+            "Setup": "multi_select",
+            "Screenshots": "files",
+            "Notes": "rich_text",
+            "Strategy": "relation (to add)"
+          }
+        },
+        "strategies": {
+          "id": "8ac4b20e-ad66-4923-9ddd-0a03e9e059ba",
+          "data_source_id": "f32ede41-14fc-431c-8a80-49109cc650f7",
+          "properties": {
+            "title": "Name",
+            "Type": "select",
+            "Status": "select",
+            "Rules": "rich_text",
+            "Entry Criteria": "rich_text",
+            "Exit Criteria": "rich_text",
+            "Risk Management": "rich_text",
+            "Trades": "relation (to add - reverse of Trades.Strategy)"
+          }
+        },
+        "trading_journal": {
+          "id": "f259bce7-256f-4de9-8f4e-53e78fcf40ba",
+          "data_source_id": "f943309a-0c9f-4e4b-9682-e486065ba9c7",
+          "properties": {
+            "title": "Name (should rename to 'Date')",
+            "Market Conditions": "select",
+            "Mood": "select",
+            "Lessons": "rich_text",
+            "Mistakes": "rich_text",
+            "Wins": "rich_text",
+            "Screenshots": "files"
+          }
+        },
+        "trading_tasks": {
+          "id": "4e6a9c43-2de2-4e76-b8c7-f75d45108032",
+          "data_source_id": "33429420-88ed-4632-9239-4fd887b451ca",
+          "properties": {
+            "title": "Name (should rename to 'Title')",
+            "Status": "select",
+            "Priority": "select",
+            "Type": "select",
+            "Due": "date",
+            "Notes": "rich_text"
+          }
+        },
+        "watchlist": {
+          "id": "331ebd4c-1097-4f30-9a76-3b36df21ddb7",
+          "data_source_id": "4bcfa153-747c-4be3-a53a-9f58cde08219",
+          "properties": {
+            "title": "Name (should rename to 'Ticker')",
+            "Sector": "select",
+            "Status": "select",
+            "Thesis": "rich_text",
+            "Target Price": "number",
+            "Stop Loss": "number"
+          }
+        }
+      }
+    }
+  },
+  "notes": {
+    "next_steps": [
+      "1. Rename title properties in Notion UI (Name → Instrument/Date/Title/Ticker as per design)",
+      "2. Add Strategy relation from Trades to Strategies (bidirectional)",
+      "3. Build Salesforce Career area (4 databases)",
+      "4. Build Cloud101 Business area (7 databases)",
+      "5. Build Personal area (11 databases)",
+      "6. Create Home dashboard with linked views"
+    ]
+  }
+}

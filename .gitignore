@@ -1,0 +1,18 @@
+# Runtime artifacts
+notion-manifest.json
+
+# Env / secrets (should never be here anyway — MCP token lives in VS Code user config)
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Just-in-case node artifacts (repo is docs-only today, but future scripts may add these)
+node_modules/
+dist/
+*.log

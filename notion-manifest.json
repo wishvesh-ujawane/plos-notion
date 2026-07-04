@@ -78,6 +78,134 @@
             "Stop Loss": "number"
           }
         }
+      },
+      "pageId": "392e619b-a9c5-81ca-bc86-deec3644e861"
+    },
+    "cloud101": {
+      "pageId": "393e619b-a9c5-8118-b3d5-f4ad05ec3e34",
+      "page_id": null,
+      "databases": {
+        "cohorts": {
+          "id": "393e619b-a9c5-8153-a282-cd4857d30106",
+          "data_source_id": null
+        },
+        "students": {
+          "id": "393e619b-a9c5-81ba-b626-c8c515895b65",
+          "data_source_id": null
+        },
+        "curriculum": {
+          "id": "393e619b-a9c5-813e-99be-d25383b49f3d",
+          "data_source_id": null
+        },
+        "sessions": {
+          "id": "393e619b-a9c5-8180-97a2-dea987d889db",
+          "data_source_id": null
+        },
+        "business_tasks": {
+          "id": "393e619b-a9c5-8131-894d-e7c145663052",
+          "data_source_id": null
+        },
+        "cloud101_finance": {
+          "id": "393e619b-a9c5-81dd-af90-e01e8b58499b",
+          "data_source_id": null
+        }
+      }
+    },
+    "home": {
+      "pageId": "393e619b-a9c5-815f-abbf-ecaa0fbf7ec5",
+      "page_id": null,
+      "databases": {}
+    },
+    "personal": {
+      "pageId": "393e619b-a9c5-813a-9a44-c7f516239fa2",
+      "page_id": null,
+      "databases": {
+        "tasks": {
+          "id": "393e619b-a9c5-8160-a57e-c33f0251827d",
+          "data_source_id": null
+        },
+        "projects": {
+          "id": "393e619b-a9c5-818a-a467-f70e09363179",
+          "data_source_id": null
+        },
+        "habits": {
+          "id": "393e619b-a9c5-81a1-94cf-fe61fe3264cb",
+          "data_source_id": null
+        },
+        "habit_logs": {
+          "id": "393e619b-a9c5-8143-86b8-e2b31b27314b",
+          "data_source_id": null
+        },
+        "goals": {
+          "id": "393e619b-a9c5-81f2-96ae-fd4c87f7273d",
+          "data_source_id": null
+        },
+        "daily_plan": {
+          "id": "393e619b-a9c5-81b0-b9e6-c91efe833120",
+          "data_source_id": null
+        },
+        "time_blocks": {
+          "id": "393e619b-a9c5-8154-884c-c09913e8452d",
+          "data_source_id": null
+        },
+        "journal": {
+          "id": "393e619b-a9c5-81a1-995d-e1ce3fb548b9",
+          "data_source_id": null
+        },
+        "health_logs": {
+          "id": null,
+          "data_source_id": null
+        },
+        "personal_learning": {
+          "id": null,
+          "data_source_id": null
+        },
+        "ideas": {
+          "id": null,
+          "data_source_id": null
+        },
+        "finance_accounts": {
+          "id": null,
+          "data_source_id": null
+        },
+        "finance_categories": {
+          "id": null,
+          "data_source_id": null
+        },
+        "finance_transactions": {
+          "id": null,
+          "data_source_id": null
+        },
+        "budgets": {
+          "id": null,
+          "data_source_id": null
+        }
+      }
+    },
+    "salesforce": {
+      "pageId": null,
+      "page_id": null,
+      "databases": {
+        "learning_sf": {
+          "id": null,
+          "data_source_id": null
+        },
+        "certifications": {
+          "id": null,
+          "data_source_id": null
+        },
+        "sf_projects": {
+          "id": null,
+          "data_source_id": null
+        },
+        "career_pipeline": {
+          "id": null,
+          "data_source_id": null
+        },
+        "career_tasks": {
+          "id": null,
+          "data_source_id": null
+        }
       }
     }
   },

@@ -1,0 +1,76 @@
+{
+  "areaKey": "cloud101",
+  "pageTitle": "🎓 Cloud101 Business",
+  "pageIcon": "🎓",
+  "databases": {
+    "cohorts": {
+      "title": "Cohorts",
+      "properties": {
+        "Batch Name": {"type": "title"},
+        "Track": {"type": "select", "options": ["SF Admin", "SF Dev", "Combined"]},
+        "Status": {"type": "select", "options": ["Planning", "Live", "Completed", "Cancelled"]},
+        "Start Date": {"type": "date"},
+        "End Date": {"type": "date"}
+      }
+    },
+    "students": {
+      "title": "Students",
+      "properties": {
+        "Name": {"type": "title"},
+        "Email": {"type": "email"},
+        "Phone": {"type": "phone_number"},
+        "Status": {"type": "select", "options": ["Prospect", "Enrolled", "Active", "Completed", "Dropped"]},
+        "Enrolled Date": {"type": "date"},
+        "Payment Status": {"type": "select", "options": ["Unpaid", "Partial", "Paid", "Refunded"]},
+        "Progress %": {"type": "number", "format": "percent"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "curriculum": {
+      "title": "Curriculum",
+      "properties": {
+        "Module Title": {"type": "title"},
+        "Track": {"type": "select", "options": ["SF Admin", "SF Dev", "Both"]},
+        "Topic": {"type": "multi_select", "options": ["Data Model", "Automation", "Security", "Apex", "LWC", "Integration", "Reporting", "Deployment", "Testing", "Best Practices"]},
+        "Duration (min)": {"type": "number"},
+        "Order": {"type": "number"},
+        "Materials URL": {"type": "url"},
+        "Status": {"type": "select", "options": ["Draft", "Ready", "Delivered"]}
+      }
+    },
+    "sessions": {
+      "title": "Sessions",
+      "properties": {
+        "Session Title": {"type": "title"},
+        "Date": {"type": "date"},
+        "Delivered By": {"type": "select", "options": ["You", "Friend", "Both", "Guest"]},
+        "Attendance": {"type": "number"},
+        "Duration (min)": {"type": "number"},
+        "Recording URL": {"type": "url"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "business_tasks": {
+      "title": "Business Tasks",
+      "properties": {
+        "Title": {"type": "title"},
+        "Area": {"type": "select", "options": ["Content", "Marketing", "Ops", "Sales", "Delivery", "Finance"]},
+        "Status": {"type": "select", "options": ["Todo", "Doing", "Done"]},
+        "Priority": {"type": "select", "options": ["P1", "P2", "P3", "P4"]},
+        "Due": {"type": "date"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "cloud101_finance": {
+      "title": "Cloud101 Finance",
+      "properties": {
+        "Date": {"type": "date"},
+        "Description": {"type": "title"},
+        "Kind": {"type": "select", "options": ["Revenue", "Expense"]},
+        "Amount": {"type": "number"},
+        "Category": {"type": "select", "options": ["Fees", "Ads", "Tools", "Contractor", "Refund", "Platform", "Other"]},
+        "Note": {"type": "rich_text"}
+      }
+    }
+  }
+}

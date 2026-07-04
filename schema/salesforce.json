@@ -1,0 +1,74 @@
+{
+  "areaKey": "salesforce",
+  "pageTitle": "☁️ Salesforce Career",
+  "pageIcon": "☁️",
+  "databases": {
+    "learning_sf": {
+      "title": "Learning (SF)",
+      "properties": {
+        "Title": {"type": "title"},
+        "Type": {"type": "select", "options": ["Course", "Certification", "Trailhead", "Book", "Skill"]},
+        "Status": {"type": "select", "options": ["Active", "Completed", "Paused", "Dropped"]},
+        "Provider": {"type": "rich_text"},
+        "URL": {"type": "url"},
+        "Progress %": {"type": "number", "format": "percent"},
+        "Started": {"type": "date"},
+        "Completed": {"type": "date"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "certifications": {
+      "title": "Certifications",
+      "properties": {
+        "Cert Name": {"type": "title"},
+        "Status": {"type": "select", "options": ["Planned", "Studying", "Scheduled", "Passed", "Failed"]},
+        "Exam Date": {"type": "date"},
+        "Score": {"type": "number"},
+        "Cost": {"type": "number"},
+        "Expiry Date": {"type": "date"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "sf_projects": {
+      "title": "SF Projects",
+      "properties": {
+        "Title": {"type": "title"},
+        "Type": {"type": "select", "options": ["Portfolio", "Coursework", "Trailhead Superbadge", "Personal"]},
+        "Status": {"type": "select", "options": ["Backlog", "In Progress", "Done", "Archived"]},
+        "Tech": {"type": "multi_select", "options": ["Apex", "LWC", "Flow", "Integration", "OmniStudio", "Data Cloud", "Experience Cloud", "Einstein", "SOQL"]},
+        "Description": {"type": "rich_text"},
+        "GitHub URL": {"type": "url"},
+        "Milestones": {"type": "rich_text"},
+        "Started": {"type": "date"},
+        "Completed": {"type": "date"}
+      }
+    },
+    "career_pipeline": {
+      "title": "Career Pipeline",
+      "properties": {
+        "Company": {"type": "title"},
+        "Role": {"type": "rich_text"},
+        "Stage": {"type": "select", "options": ["Prospecting", "Applied", "Screen", "Assessment", "Onsite", "Offer", "Rejected", "Withdrawn"]},
+        "Applied Date": {"type": "date"},
+        "Next Step": {"type": "rich_text"},
+        "Next Step Date": {"type": "date"},
+        "Contact Name": {"type": "rich_text"},
+        "Contact Email": {"type": "email"},
+        "Source": {"type": "select", "options": ["LinkedIn", "Referral", "Job Board", "Recruiter", "Company Site", "Other"]},
+        "Salary Range": {"type": "rich_text"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "career_tasks": {
+      "title": "Career Tasks",
+      "properties": {
+        "Title": {"type": "title"},
+        "Type": {"type": "select", "options": ["Study", "Application", "Networking", "Interview Prep", "Portfolio"]},
+        "Status": {"type": "select", "options": ["Todo", "Doing", "Done"]},
+        "Priority": {"type": "select", "options": ["P1", "P2", "P3", "P4"]},
+        "Due": {"type": "date"},
+        "Notes": {"type": "rich_text"}
+      }
+    }
+  }
+}

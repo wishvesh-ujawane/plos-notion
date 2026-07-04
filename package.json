@@ -1,0 +1,13 @@
+{
+  "name": "plos-notion-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "patch:trading": "node ./scripts/patch-trading-dbs.js",
+    "create:trading": "node ./scripts/create-dbs-trading.js",
+    "build:workspace": "node ./scripts/build-notion-workspace.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^3.0.0"
+  }
+}

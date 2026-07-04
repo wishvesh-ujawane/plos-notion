@@ -1,0 +1,10 @@
+{
+  "areaKey": "home",
+  "pageTitle": "🏠 Home",
+  "pageIcon": "🏠",
+  "databases": {},
+  "dashboardConfig": {
+    "areaPages": ["trading", "personal", "salesforce", "cloud101"],
+    "databasePages": ["personal.tasks", "salesforce.career_tasks", "trading.trading_tasks"]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "areaKey": "trading",
+  "pageTitle": "🧭 Trading",
+  "pageIcon": "🧭",
+  "databases": {
+    "strategies": {
+      "title": "Strategies",
+      "icon": "🧠",
+      "properties": {
+        "Name": {"type":"title"},
+        "Type": {"type":"select","options":["Swing","Intraday","Positional","Options","Scalp"]},
+        "Status": {"type":"select","options":["Active","Paused","Retired"]},
+        "Rules": {"type":"rich_text"},
+        "Entry Criteria": {"type":"rich_text"},
+        "Exit Criteria": {"type":"rich_text"},
+        "Risk Management": {"type":"rich_text"}
+      }
+    },
+    "trades": {
+      "title": "Trades",
+      "icon": "📈",
+      "properties": {
+        "Instrument": {"type":"title"},
+        "Direction": {"type":"select","options":["LONG","SHORT"]},
+        "Status": {"type":"select","options":["Open","Closed","Cancelled"]},
+        "Entry Date": {"type":"date"},
+        "Entry Price": {"type":"number"},
+        "Exit Date": {"type":"date"},
+        "Exit Price": {"type":"number"},
+        "Size": {"type":"number"},
+        "PnL": {"type":"formula","formula":"(prop(\"Exit Price\") - prop(\"Entry Price\")) * prop(\"Size\") * if(prop(\"Direction\") == \"LONG\", 1, -1)"},
+        "Setup": {"type":"multi_select","options":["Breakout","Reversal","Trend","Range","News","Earnings","Momentum"]},
+        "Screenshots": {"type":"files"},
+        "Notes": {"type":"rich_text"},
+        "Strategy": {"type":"relation","databaseKey":"strategies","syncedName":"Trades"}
+      }
+    },
+    "trading_journal": {
+      "title": "Trading Journal",
+      "icon": "📓",
+      "properties": {
+        "Date": {"type":"title"},
+        "Market Conditions": {"type":"select","options":["Bullish","Bearish","Choppy","Rangebound","Volatile"]},
+        "Mood": {"type":"select","options":["1","2","3","4","5"]},
+        "Lessons": {"type":"rich_text"},
+        "Mistakes": {"type":"rich_text"},
+        "Wins": {"type":"rich_text"},
+        "Screenshots": {"type":"files"}
+      }
+    },
+    "trading_tasks": {
+      "title": "Trading Tasks",
+      "icon": "✅",
+      "properties": {
+        "Title": {"type":"title"},
+        "Status": {"type":"select","options":["Todo","Doing","Done"]},
+        "Priority": {"type":"select","options":["P1","P2","P3","P4"]},
+        "Type": {"type":"select","options":["Research","Backtest","Journal Review","Setup","Ops"]},
+        "Due": {"type":"date"},
+        "Notes": {"type":"rich_text"}
+      }
+    },
+    "watchlist": {
+      "title": "Watchlist",
+      "icon": "👀",
+      "properties": {
+        "Ticker": {"type":"title"},
+        "Sector": {"type":"select","options":["Tech","Finance","Energy","Healthcare","Consumer","Industrials","Materials","Utilities","Realty","Other"]},
+        "Status": {"type":"select","options":["Watching","Entered","Skipped"]},
+        "Thesis": {"type":"rich_text"},
+        "Target Price": {"type":"number"},
+        "Stop Loss": {"type":"number"}
+      }
+    }
+  }
+}

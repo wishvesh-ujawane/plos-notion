@@ -1,0 +1,156 @@
+{
+  "areaKey": "personal",
+  "pageTitle": "🧘 Personal",
+  "pageIcon": "🧘",
+  "databases": {
+    "tasks": {
+      "title": "Tasks",
+      "properties": {
+        "Title": {"type": "title"},
+        "Status": {"type": "select", "options": ["Todo", "Doing", "Done"]},
+        "Priority": {"type": "select", "options": ["P1", "P2", "P3", "P4"]},
+        "Due": {"type": "date"},
+        "Today": {"type": "checkbox"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "properties": {
+        "Title": {"type": "title"},
+        "Type": {"type": "select", "options": ["Personal", "Official"]},
+        "Status": {"type": "select", "options": ["Active", "Paused", "Archived", "Abandoned"]},
+        "Emoji": {"type": "rich_text"},
+        "Color": {"type": "select", "options": ["Slate", "Red", "Orange", "Amber", "Yellow", "Green", "Teal", "Blue", "Indigo", "Purple", "Pink"]},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "habits": {
+      "title": "Habits",
+      "properties": {
+        "Title": {"type": "title"},
+        "Ritual": {"type": "select", "options": ["Morning", "Evening", "None"]},
+        "Active": {"type": "checkbox"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "habit_logs": {
+      "title": "Habit Logs",
+      "properties": {
+        "Date": {"type": "title"},
+        "Completed": {"type": "checkbox"},
+        "Note": {"type": "rich_text"}
+      }
+    },
+    "goals": {
+      "title": "Goals",
+      "properties": {
+        "Title": {"type": "title"},
+        "Category": {"type": "select", "options": ["Career", "Health", "Learning", "Finance", "Relations", "Personal"]},
+        "Horizon": {"type": "select", "options": ["Short", "Medium", "Long"]},
+        "Target Date": {"type": "date"},
+        "Progress %": {"type": "number", "format": "percent"},
+        "Status": {"type": "select", "options": ["Active", "Achieved", "Archived"]}
+      }
+    },
+    "daily_plan": {
+      "title": "Daily Plan",
+      "properties": {
+        "Date": {"type": "title"},
+        "Work Mode": {"type": "select", "options": ["WFH", "WFO", "Saturday", "Sunday"]},
+        "Top Priorities": {"type": "rich_text"},
+        "Morning Note": {"type": "rich_text"},
+        "Evening Note": {"type": "rich_text"}
+      }
+    },
+    "time_blocks": {
+      "title": "Time Blocks",
+      "properties": {
+        "Title": {"type": "title"},
+        "Date": {"type": "date"},
+        "Start Time": {"type": "rich_text"},
+        "End Time": {"type": "rich_text"},
+        "Kind": {"type": "select", "options": ["Deep Work", "Meeting", "Break", "Exercise", "Meal", "Commute", "Personal", "Ritual", "Admin", "Learning", "Sleep", "Flex"]},
+        "Locked": {"type": "checkbox"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "journal": {
+      "title": "Journal",
+      "properties": {
+        "Date": {"type": "title"},
+        "Mood": {"type": "select", "options": ["1", "2", "3", "4", "5"]},
+        "Tags": {"type": "multi_select", "options": []}
+      }
+    },
+    "health_logs": {
+      "title": "Health Logs",
+      "properties": {
+        "Date": {"type": "date"},
+        "Type": {"type": "select", "options": ["Steps", "Sleep", "Water", "Workout", "Weight", "Mood"]},
+        "Value": {"type": "number"},
+        "Unit": {"type": "select", "options": ["steps", "hr", "L", "min", "kg", "score"]},
+        "Note": {"type": "rich_text"}
+      }
+    },
+    "personal_learning": {
+      "title": "Personal Learning",
+      "properties": {
+        "Title": {"type": "title"},
+        "Type": {"type": "select", "options": ["Course", "Book", "Skill", "Certification"]},
+        "Status": {"type": "select", "options": ["Active", "Completed", "Paused", "Dropped"]},
+        "Progress %": {"type": "number", "format": "percent"},
+        "Provider": {"type": "rich_text"},
+        "Notes": {"type": "rich_text"}
+      }
+    },
+    "ideas": {
+      "title": "Ideas",
+      "properties": {
+        "Content": {"type": "title"},
+        "Tags": {"type": "multi_select", "options": []},
+        "Archived": {"type": "checkbox"},
+        "Promoted To": {"type": "url"}
+      }
+    },
+    "finance_accounts": {
+      "title": "Finance Accounts",
+      "properties": {
+        "Name": {"type": "title"},
+        "Kind": {"type": "select", "options": ["Checking", "Savings", "Credit Card", "Cash", "Investment", "Loan"]},
+        "Currency": {"type": "select", "options": ["INR", "USD", "EUR", "GBP"]},
+        "Opening Balance": {"type": "number"},
+        "Archived": {"type": "checkbox"}
+      }
+    },
+    "finance_categories": {
+      "title": "Finance Categories",
+      "properties": {
+        "Name": {"type": "title"},
+        "Kind": {"type": "select", "options": ["Income", "Expense"]},
+        "Color": {"type": "select", "options": ["Slate", "Red", "Orange", "Amber", "Yellow", "Green", "Teal", "Blue", "Indigo", "Purple", "Pink"]},
+        "Archived": {"type": "checkbox"}
+      }
+    },
+    "finance_transactions": {
+      "title": "Finance Transactions",
+      "properties": {
+        "Date": {"type": "date"},
+        "Description": {"type": "title"},
+        "Kind": {"type": "select", "options": ["Income", "Expense", "Transfer"]},
+        "Amount": {"type": "number"},
+        "Currency": {"type": "select", "options": ["INR", "USD", "EUR", "GBP"]},
+        "Tags": {"type": "multi_select", "options": []},
+        "Note": {"type": "rich_text"}
+      }
+    },
+    "budgets": {
+      "title": "Budgets",
+      "properties": {
+        "Description": {"type": "title"},
+        "Month Start": {"type": "date"},
+        "Amount": {"type": "number"}
+      }
+    }
+  }
+}

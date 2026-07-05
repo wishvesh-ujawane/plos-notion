@@ -65,14 +65,14 @@ Under parent page `PLOS — Second Brain`, create these five sibling pages, in t
 | Order | Page title              | Icon | Body                                                                                                    |
 | ----- | ----------------------- | ---- | ------------------------------------------------------------------------------------------------------- |
 | 1     | 🧭 Trading              | 🧭   | See [01-trading.md](design/01-trading.md) area-page body spec                                            |
-| 2     | ☁️ Salesforce Career    | ☁️   | See [02-salesforce.md](design/02-salesforce.md) area-page body spec                                      |
+| 2     | 💼 Career               | 💼   | See [02-career.md](design/02-career.md) area-page body spec                                              |
 | 3     | 🎓 Cloud101 Business    | 🎓   | See [03-cloud101.md](design/03-cloud101.md) area-page body spec                                          |
 | 4     | 🧘 Personal             | 🧘   | See [04-personal.md](design/04-personal.md) area-page body spec (uses **Do / Grow / Steward** groupings) |
 | 5     | 🏠 Home                 | 🏠   | Empty for now — filled in Phase 9                                                                        |
 
 **API calls (per page):**
 1. `API-post-page` with parent `page_id` = PLOS — Second Brain, `icon.emoji` = row's icon, `properties.title` = row's title. Body blocks are appended later via `API-update-page-markdown` or `API-patch-block-children`.
-2. Record `id` returned into `notion-manifest.areas.<key>.pageId`. Keys: `trading`, `salesforce`, `cloud101`, `personal`, `home`.
+2. Record `id` returned into `notion-manifest.areas.<key>.pageId`. Keys: `trading`, `career`, `cloud101`, `personal`, `home`.
 
 ### Phase 2 — Databases (properties only, no relations)
 
@@ -90,7 +90,7 @@ For each area, create every DB listed in [WORKSPACE-DESIGN.md](WORKSPACE-DESIGN.
 
 **Order within an area:**
 - Trading: Strategies → Trades → Trading Journal → Trading Tasks → Watchlist
-- Salesforce: Learning (SF) → Certifications → SF Projects → Career Pipeline → Career Tasks
+- Career: Learning → Certifications → Portfolio Projects → Career Pipeline → Career Tasks
 - Cloud101: Cohorts → Curriculum → Sessions → Students → Business Tasks → Cloud101 Finance
 - Personal: Finance Categories → Finance Accounts → Projects → Habits → Goals → Tasks → Habit Logs → Daily Plan → Time Blocks → Journal → Health Logs → Personal Learning → Ideas → Finance Transactions → Budgets
 
@@ -108,8 +108,8 @@ Add every relation from [WORKSPACE-DESIGN.md](WORKSPACE-DESIGN.md) and the "Extr
 
 **Order within phase:** do intra-area relations first, then cross-area. Cross-area relations in this design:
 - `Career Tasks.Related Application` → Career Pipeline (same area, ok)
-- `Career Tasks.Related Learning` → Learning (SF) (same area, ok)
-- `Certifications.Study Materials` → Learning (SF) (same area, ok)
+- `Career Tasks.Related Learning` → Learning (same area, ok)
+- `Certifications.Study Materials` → Learning (same area, ok)
 - `Curriculum.Cohorts` ↔ `Cohorts.Curriculum` (same area, ok)
 - `Cloud101 Finance.Cohort/Student` → Cohorts/Students (same area, ok)
 - `Habits.Logs` ↔ `Habit Logs.Habit` (same area, ok)
@@ -272,7 +272,7 @@ Never put plain strings where the API expects a rich_text array. That's the #1 c
         "tradingJournal.dailyJournal": "<...>"
       }
     },
-    "salesforce": { /* same shape */ },
+    "career":     { /* same shape */ },
     "cloud101":   { /* same shape */ },
     "personal":   { /* same shape */ },
     "home":       { "pageId": "<...>" }
@@ -317,7 +317,7 @@ Do not auto-continue between phases. The user is the safety valve.
 After Phase 10 completes, run these sanity queries and report results:
 
 1. `API-post-search` for `"PLOS — Second Brain"` → confirm one page, and it has exactly 6 children (`🧭`, `☁️`, `🎓`, `🧘`, `🏠`, `📖`).
-2. For each area page, `API-get-block-children` and count child DBs vs expected (Trading 5, Salesforce 5, Cloud101 6, Personal 15, Home 0).
+2. For each area page, `API-get-block-children` and count child DBs vs expected (Trading 5, Career 5, Cloud101 6, Personal 15, Home 0).
 3. Pick 3 DBs at random, `API-query-data-source` with no filter, `page_size: 5` → confirm the seed rows are present and no phantom rows.
 4. `API-retrieve-a-data-source` on Tasks → confirm the `Priority Score` formula compiles (no `errored` type in the response schema).
 

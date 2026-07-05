@@ -14,7 +14,7 @@ Area page icon: 🧘. Body: heading `Personal` + text line "Life OS: tasks, proj
 ### Tasks — add
 - **Priority Score** — formula → [00-conventions.md § 6.2](00-conventions.md#62-priority-score)
 - **Days Until Due** — formula → [00-conventions.md § 6.1](00-conventions.md#61-days-until-due)
-- **Area** — select: `Trading`, `Salesforce`, `Cloud101`, `Personal`, `Home`, `Health`, `Finance` — so the Home dashboard can filter
+- **Area** — select: `Trading`, `Career`, `Cloud101`, `Personal`, `Home`, `Health`, `Finance` — so the Home dashboard can filter
   - _(Even though each area has its own Tasks-like DB, Personal Tasks is your general catch-all. The `Area` select lets the "Today across life" dashboard aggregate them all.)_
 
 ### Projects — add

@@ -1,6 +1,6 @@
 # plos-notion — PLOS as a Notion workspace
 
-Standalone companion to the [PLOS](https://github.com/wishvesh-ujawane/PLOS) Next.js app. Instead of a web UI, this repo is the source of truth for a Notion "second brain" workspace that mirrors PLOS in shape but is organized by **life areas** (Trading / Salesforce Career / Cloud101 Business / Personal) rather than by module.
+Standalone companion to the [PLOS](https://github.com/wishvesh-ujawane/PLOS) Next.js app. Instead of a web UI, this repo is the source of truth for a Notion "second brain" workspace that mirrors PLOS in shape but is organized by **life areas** (Trading / Career / Cloud101 Business / Personal) rather than by module.
 
 The actual Notion pages and databases are built directly in Notion via the [official Notion MCP server](https://github.com/makenotion/notion-mcp-server) driven by Copilot Chat. This repo holds:
 
@@ -11,7 +11,7 @@ The actual Notion pages and databases are built directly in Notion via the [offi
 | [WORKSPACE-DESIGN.md](WORKSPACE-DESIGN.md) | Authoritative schema — every database's properties, options, and relations. |
 | [design/00-conventions.md](design/00-conventions.md) | Icons, statuses, priority vocab, reusable formula library, view patterns. Read before any area file. |
 | [design/01-trading.md](design/01-trading.md) | 🧭 Trading — extra properties, views, templates, seed rows. |
-| [design/02-salesforce.md](design/02-salesforce.md) | ☁️ Salesforce Career — extra properties, views, templates, seed rows. |
+| [design/02-career.md](design/02-career.md) | 💼 Career — extra properties, views, templates, seed rows (learning, portfolio, certifications, job pipeline, prep). |
 | [design/03-cloud101.md](design/03-cloud101.md) | 🎓 Cloud101 Business — extra properties, views, templates, seed rows. |
 | [design/04-personal.md](design/04-personal.md) | 🧘 Personal — extra properties, views, templates, seed rows (largest area). |
 | [design/05-home-dashboard.md](design/05-home-dashboard.md) | 🏠 Home dashboard — linked-view layout, built last. |

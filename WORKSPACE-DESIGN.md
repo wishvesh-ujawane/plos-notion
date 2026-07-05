@@ -7,7 +7,7 @@ Source of truth for what gets built in Notion. Read by Copilot Chat (via MCP) to
 Under a single parent page `PLOS — Second Brain`, four life-area pages:
 
 - 🧭 **Trading**
-- ☁️ **Salesforce Career**
+- 💼 **Career**
 - 🎓 **Cloud101 Business**
 - 🧘 **Personal**
 
@@ -72,11 +72,14 @@ Select / multi-select option values are copied verbatim from Prisma enums in the
 
 ---
 
-## ☁️ Salesforce Career
+## 💼 Career
 
-### Learning (SF) (DB)
+Covers **all** career-related activity — learning, implementing, certifications, job switching, interview prep. Salesforce vocabulary is preserved as first-class values inside multi-selects so the current Salesforce focus is not lost, but no DB assumes Salesforce.
+
+### Learning (DB)
 - **Title** — title
-- **Type** — select: `Course`, `Certification`, `Trailhead`, `Book`, `Skill`
+- **Type** — select: `Course`, `Certification`, `Book`, `Video / Podcast`, `Article / Blog`, `Workshop`, `Practice Project`, `Trailhead`, `Skill`
+- **Domain** — multi-select: `Salesforce`, `Web Dev`, `Data / AI`, `Cloud / DevOps`, `Product / PM`, `Design`, `Leadership`, `Communication`, `System Design`, `Career Skills`, `Other`
 - **Status** — select: `Active`, `Completed`, `Paused`, `Dropped`
 - **Provider** — rich text
 - **URL** — url
@@ -92,16 +95,18 @@ Select / multi-select option values are copied verbatim from Prisma enums in the
 - **Score** — number
 - **Cost** — number
 - **Expiry Date** — date
-- **Study Materials** — relation → Learning (SF), multi
+- **Study Materials** — relation → Learning, multi
 - **Notes** — rich text
 
-### SF Projects (DB)
+### Portfolio Projects (DB)
 - **Title** — title
-- **Type** — select: `Portfolio`, `Coursework`, `Trailhead Superbadge`, `Personal`
+- **Type** — select: `Portfolio`, `Coursework`, `Trailhead Superbadge`, `OSS Contribution`, `Talk / Writing`, `Personal`
 - **Status** — select: `Backlog`, `In Progress`, `Done`, `Archived`
-- **Tech** — multi-select: `Apex`, `LWC`, `Flow`, `Integration`, `OmniStudio`, `Data Cloud`, `Experience Cloud`, `Einstein`, `SOQL`
+- **Domain** — multi-select: same options as Learning.Domain
+- **Tech** — multi-select: `Apex`, `LWC`, `Flow`, `Integration`, `OmniStudio`, `Data Cloud`, `Experience Cloud`, `Einstein`, `SOQL`, `React`, `Next.js`, `Node`, `Python`, `SQL`, `Postgres`, `dbt`, `AWS`, `Docker`, `Kubernetes`, `Terraform`, `TypeScript`, `Rust`, `Go`, `Other`
 - **Description** — rich text
 - **GitHub URL** — url
+- **Live URL** — url
 - **Milestones** — rich text
 - **Started** — date
 - **Completed** — date
@@ -110,12 +115,15 @@ Select / multi-select option values are copied verbatim from Prisma enums in the
 - **Company** — title
 - **Role** — rich text
 - **Stage** — select: `Prospecting`, `Applied`, `Screen`, `Assessment`, `Onsite`, `Offer`, `Rejected`, `Withdrawn`
+- **Role Type** — select: `Full-time`, `Contract`, `Freelance`, `Internship`, `Fractional`
+- **Work Mode** — select: `Remote`, `Hybrid`, `Onsite`
+- **Domain** — multi-select: same options as Learning.Domain
 - **Applied Date** — date
 - **Next Step** — rich text
 - **Next Step Date** — date
 - **Contact Name** — rich text
 - **Contact Email** — email
-- **Source** — select: `LinkedIn`, `Referral`, `Job Board`, `Recruiter`, `Company Site`, `Other`
+- **Source** — select: `LinkedIn`, `Referral`, `Job Board`, `Recruiter`, `Company Site`, `Cold Outreach`, `Other`
 - **Salary Range** — rich text
 - **Notes** — rich text
 
@@ -126,7 +134,7 @@ Select / multi-select option values are copied verbatim from Prisma enums in the
 - **Priority** — select: `P1`, `P2`, `P3`, `P4`
 - **Due** — date
 - **Related Application** — relation → Career Pipeline
-- **Related Learning** — relation → Learning (SF)
+- **Related Learning** — relation → Learning
 
 ---
 

@@ -65,7 +65,7 @@ Each row describes one linked_database block. `Source` = which underlying DB the
 | Today — Time Blocks | Time Blocks | `Date` = today | `Start Time` asc | `Kind` | table |
 | Today — Habits to log | Habits | `Active` = ✓ | `Ritual` asc | `Ritual` | table |
 
-> **Note:** True "union across four task DBs" is not natively supported by a single linked view. Recommended pattern: consolidate day-of tasks in **Personal Tasks** with `Area` set to Trading/Salesforce/Cloud101/Personal so a single view can show them all. Area-specific task DBs stay for planning; day-of pull is one place.
+> **Note:** True "union across four task DBs" is not natively supported by a single linked view. Recommended pattern: consolidate day-of tasks in **Personal Tasks** with `Area` set to Trading/Career/Cloud101/Personal so a single view can show them all. Area-specific task DBs stay for planning; day-of pull is one place.
 > Alternative: create three separate linked views (Trading Tasks / Career Tasks / Business Tasks / Personal Tasks) and stack them under the same heading.
 
 ### 🗓️ This week

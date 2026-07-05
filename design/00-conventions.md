@@ -15,10 +15,10 @@ Every top-level area page and every database gets a fixed emoji so the sidebar a
 |                    |      | Trading Journal         | 📓   |
 |                    |      | Trading Tasks           | ✅   |
 |                    |      | Watchlist               | 👀   |
-| Salesforce Career  | ☁️   | Learning (SF)           | 📚   |
+| Career             | 💼   | Learning                | 📚   |
 |                    |      | Certifications          | 🎖️   |
-|                    |      | SF Projects             | 🛠️   |
-|                    |      | Career Pipeline         | 💼   |
+|                    |      | Portfolio Projects      | 🛠️   |
+|                    |      | Career Pipeline         | 📮   |
 |                    |      | Career Tasks            | ✅   |
 | Cloud101 Business  | 🎓   | Cohorts                 | 👥   |
 |                    |      | Students                | 🧑‍🎓  |
